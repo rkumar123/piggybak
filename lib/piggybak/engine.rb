@@ -151,7 +151,7 @@ module Piggybak
 
             field :line_items
             field :billing_address
-            field :shipping_address
+           
             field :order_notes do
               pretty_value do
                 value.inject([]) { |arr, o| arr << o.details }.join("<br /><br />").html_safe
@@ -214,10 +214,7 @@ module Piggybak
               active true
               help "Required"
             end
-            field :shipping_address do
-              active true
-              help "Required"
-            end
+           
             field :line_items do
               active true
               help ""
